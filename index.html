@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#cfe0f1">
+    <title>Mohammed &amp; Monaia · Katb Ktab</title>
+    <meta name="description" content="We invite you to the Katb Ktab of Mohammed &amp; Monaia · Saturday, October 24, 2026">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Great+Vibes&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============ Reusable flower drawings (no image files needed) ============ -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+        <g id="bloom">
+            <g fill="#fff" stroke="#9db8d6" stroke-width="1.2">
+                <ellipse cx="0" cy="-14" rx="7" ry="13"/>
+                <ellipse cx="0" cy="-14" rx="7" ry="13" transform="rotate(60)"/>
+                <ellipse cx="0" cy="-14" rx="7" ry="13" transform="rotate(120)"/>
+                <ellipse cx="0" cy="-14" rx="7" ry="13" transform="rotate(180)"/>
+                <ellipse cx="0" cy="-14" rx="7" ry="13" transform="rotate(240)"/>
+                <ellipse cx="0" cy="-14" rx="7" ry="13" transform="rotate(300)"/>
+            </g>
+            <circle r="5" fill="#e3c98f"/>
+        </g>
+        <path id="leaf" d="M0 0C8-10 22-10 30 0C22 10 8 10 0 0Z" fill="#a9c3dc"/>
+        <g id="cornerArt">
+            <path d="M0 42C50 46 92 82 112 142S132 202 142 220" fill="none" stroke="#8fb0d0" stroke-width="2"/>
+            <path d="M42 0C46 50 82 92 142 112S202 132 220 142" fill="none" stroke="#8fb0d0" stroke-width="2"/>
+            <use href="#leaf" transform="translate(52 56) rotate(35)"/>
+            <use href="#leaf" transform="translate(80 84) rotate(60)"/>
+            <use href="#leaf" transform="translate(104 118) rotate(80)"/>
+            <use href="#leaf" transform="translate(56 52) rotate(55)"/>
+            <use href="#leaf" transform="translate(84 80) rotate(30)"/>
+            <use href="#leaf" transform="translate(118 104) rotate(10)"/>
+            <use href="#bloom" transform="translate(32 32) scale(1.5)"/>
+            <use href="#bloom" transform="translate(98 98) scale(1.1)"/>
+            <use href="#bloom" transform="translate(150 38) scale(.8)"/>
+            <use href="#bloom" transform="translate(38 150) scale(.8)"/>
+        </g>
+    </defs>
+</svg>
+
+<!-- Sky + drifting clouds (fixed behind the whole page) -->
+<div class="sky" aria-hidden="true">
+    <i class="cloud c1"></i><i class="cloud c2"></i><i class="cloud c3"></i>
+</div>
+
+<!-- ======================= COVER ======================= -->
+<section class="cover" id="cover">
+    <svg class="corner tl" viewBox="0 0 220 220" aria-hidden="true"><use href="#cornerArt"/></svg>
+    <svg class="corner tr" viewBox="0 0 220 220" aria-hidden="true"><use href="#cornerArt"/></svg>
+    <svg class="corner bl" viewBox="0 0 220 220" aria-hidden="true"><use href="#cornerArt"/></svg>
+    <svg class="corner br" viewBox="0 0 220 220" aria-hidden="true"><use href="#cornerArt"/></svg>
+
+    <div class="petals" id="petals" aria-hidden="true"></div>
+
+    <div class="cover-content">
+        <h1 class="names"><span>Mohammed</span><i>&amp;</i><span>Monaia</span></h1>
+        <p class="ornament">❦</p>
+        <p class="cover-date">October 24, 2026</p>
+        <p class="label">Cordially Invites</p>
+        <button id="openBtn" class="btn" type="button">Open</button>
+    </div>
+</section>
+
+<!-- ======================= MAIN PAGE ======================= -->
+<main id="main" hidden>
+
+    <!-- Welcome -->
+    <section class="section welcome">
+        <svg class="corner tl" viewBox="0 0 220 220" aria-hidden="true"><use href="#cornerArt"/></svg>
+        <svg class="corner tr" viewBox="0 0 220 220" aria-hidden="true"><use href="#cornerArt"/></svg>
+        <div class="wrap">
+            <p class="label">Welcome To Our Katb Ktab</p>
+            <h2 class="names big"><span>Mohammed</span><i>&amp;</i><span>Monaia</span></h2>
+            <p class="body verse">
+                “And among His signs is that He created for you spouses from among yourselves,
+                that you may find comfort in them, and He placed between you affection and mercy.”
+            </p>
+            <p class="label small">Quran 30:21</p>
+        </div>
+    </section>
+
+    <!-- Ceremony -->
+    <section class="section">
+        <div class="wrap">
+            <h2 class="title">Ceremony Info</h2>
+            <div class="couple">
+                <div>
+                    <h3 class="name-card">Mohammed</h3>
+                    <p class="label small">Groom</p>
+                </div>
+                <i class="amp">&amp;</i>
+                <div>
+                    <h3 class="name-card">Monaia</h3>
+                    <p class="label small">Bride</p>
+                </div>
+            </div>
+            <svg class="divider" viewBox="0 0 240 30" aria-hidden="true">
+                <line x1="10" y1="15" x2="98" y2="15" stroke="#9db8d6"/>
+                <use href="#bloom" transform="translate(120 15) scale(.6)"/>
+                <line x1="142" y1="15" x2="230" y2="15" stroke="#9db8d6"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Reception -->
+    <section class="section">
+        <div class="wrap">
+            <h2 class="title">Reception Info</h2>
+            <p class="body">The reception will take place at:</p>
+            <p class="time" id="eventTime">7:00 PM</p>
+            <p class="label">Saturday</p>
+            <p class="big-day">24</p>
+            <p class="label">October 2026</p>
+            <p class="body place">Al Safa Wedding Hall · Cairo, Egypt</p>
+        </div>
+    </section>
+
+    <!-- Countdown -->
+    <section class="section">
+        <div class="wrap">
+            <h2 class="title">Countdown</h2>
+            <p class="body">Until we say “We Did It”</p>
+            <div class="count-grid">
+                <div class="time-box"><b id="days">000</b><span>Days</span></div>
+                <div class="time-box"><b id="hours">00</b><span>Hours</span></div>
+                <div class="time-box"><b id="minutes">00</b><span>Minutes</span></div>
+                <div class="time-box"><b id="seconds">00</b><span>Seconds</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Calendar -->
+    <section class="section">
+        <div class="wrap">
+            <div class="calendar-frame">
+                <p class="cal-month" id="calMonth">October 2026</p>
+                <div class="cal-grid" id="calGrid"></div>
+            </div>
+            <a class="btn outline" target="_blank" rel="noopener"
+               href="https://www.google.com/calendar/render?action=TEMPLATE&amp;text=Mohammed%20%26%20Monaia%27s%20Katb%20Ktab&amp;dates=20261024/20261025&amp;details=Join%20us%20to%20celebrate%20the%20Katb%20Ktab%20of%20Mohammed%20%26%20Monaia&amp;location=Al%20Safa%20Wedding%20Hall%2C%20Cairo">
+                Add to Calendar
+            </a>
+        </div>
+    </section>
+
+    <!-- RSVP -->
+    <section class="section">
+        <div class="wrap">
+            <h2 class="title">Confirm Your Attendance</h2>
+            <p class="body">Your presence would be an honor. Please RSVP so we can prepare the warmest welcome for you.</p>
+            <button id="openForm" class="btn outline" type="button">RSVP</button>
+        </div>
+    </section>
+
+    <!-- Venue -->
+    <section class="section">
+        <div class="wrap">
+            <h2 class="title">Wedding Reception Venue</h2>
+            <div class="venue-card">
+                <h3 class="name-card small">Al Safa Wedding Hall</h3>
+                <p class="body">Cairo, Egypt</p>
+            </div>
+            <a class="btn" target="_blank" rel="noopener" href="https://maps.app.goo.gl/DuRGij1YriksCJYm9?g_st=iw">Get Directions</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <section class="section footer">
+        <svg class="corner bl" viewBox="0 0 220 220" aria-hidden="true"><use href="#cornerArt"/></svg>
+        <svg class="corner br" viewBox="0 0 220 220" aria-hidden="true"><use href="#cornerArt"/></svg>
+        <div class="wrap">
+            <p class="body verse">
+                Joy grows when it is shared among the ones we love,
+                on a radiant night where happiness lights up the sky.
+            </p>
+            <p class="body">Your presence would be the greatest gift we could receive!</p>
+            <p class="names small"><span>Mohammed</span> <i>&amp;</i> <span>Monaia</span></p>
+        </div>
+    </section>
+</main>
+
+<!-- ======================= RSVP POPUP ======================= -->
+<div class="rsvp-popup" id="popup">
+    <form class="popup-box" id="rsvpForm" novalidate>
+        <input type="hidden" name="access_key" value="f1950a0f-ba2e-4ac8-acb9-6dfe79e78db7">
+        <input type="hidden" name="subject" value="New RSVP · Mohammed &amp; Monaia">
+
+        <button type="button" class="close-popup" id="closePopup" aria-label="Close">&times;</button>
+
+        <h2 class="title">Confirm Your Attendance</h2>
+
+        <div class="success-message" id="successMessage">
+            <div class="success-heart">♡</div>
+            <h3 class="name-card small">Thank You</h3>
+            <p class="body">Your response has been received.<br>We can’t wait to celebrate with you.</p>
+        </div>
+
+        <input type="text" id="fullName" name="name" placeholder="Your name" autocomplete="name">
+        <p class="error-message" id="nameError"></p>
+
+        <div class="attendance">
+            <label class="attendance-card">
+                <input type="radio" name="attendance" value="I will attend">
+                <span>I will attend</span>
+            </label>
+            <label class="attendance-card">
+                <input type="radio" name="attendance" value="Sorry, I can't make it">
+                <span>Sorry, I can’t make it</span>
+            </label>
+        </div>
+        <p class="error-message" id="attendanceError"></p>
+
+        <textarea name="message" placeholder="Leave us a lovely message (optional)"></textarea>
+
+        <div class="submit-wrapper">
+            <button class="btn" id="submitBtn" type="submit">Confirm</button>
+        </div>
+    </form>
+</div>
+
+<!-- Music -->
+<button id="musicBtn" class="music-btn" type="button" aria-label="Toggle music" hidden>♪</button>
+<audio id="music" src="music/song.mp3" loop preload="auto"></audio>
+
+<script src="script.js"></script>
+</body>
+</html>
