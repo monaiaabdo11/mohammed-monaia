@@ -133,19 +133,6 @@ body{
     .btn:hover{ background:var(--navy); border-color:var(--navy); color:#fff; transform:translateY(-3px); box-shadow:0 12px 28px rgba(51,80,111,.25); }
 }
 
-/* ---------- Flower corners ---------- */
-.corner{
-    position:absolute; width:clamp(120px,34vw,260px); height:auto;
-    pointer-events:none; z-index:1;
-    filter:drop-shadow(0 6px 10px rgba(51,80,111,.08));
-}
-.corner.tl{ top:0; left:0; }
-.corner.tr{ top:0; right:0; transform:scaleX(-1); }
-.corner.bl{ bottom:0; left:0; transform:scaleY(-1); }
-.corner.br{ bottom:0; right:0; transform:scale(-1,-1); }
-
-.divider{ display:block; width:min(240px,70%); margin:clamp(22px,5vw,34px) auto 0; }
-
 /* ---------- Cover ---------- */
 .cover{
     position:relative;
@@ -169,7 +156,6 @@ body{
     letter-spacing:.08em;
     margin-bottom:clamp(26px,6vw,40px);
 }
-.cover .label{ margin-bottom:18px; }
 
 /* falling petals */
 .petals{ position:absolute; inset:0; overflow:hidden; pointer-events:none; z-index:3; }
@@ -197,14 +183,7 @@ main{ animation:fadeIn .9s ease; }
 }
 .wrap{ position:relative; z-index:3; width:100%; max-width:620px; margin:0 auto; }
 
-.welcome{ padding-top:clamp(110px,26vw,190px); }
-.welcome .verse{ max-width:30em; margin:0 auto 14px; }
 
-.couple{
-    display:flex; justify-content:center; align-items:center;
-    gap:clamp(14px,5vw,40px); flex-wrap:wrap;
-}
-.amp{ font-family:var(--script); font-style:normal; font-size:clamp(2rem,8vw,3rem); color:var(--gold); }
 
 .time{
     font-family:var(--serif);
@@ -221,7 +200,6 @@ main{ animation:fadeIn .9s ease; }
     color:var(--blue);
     margin:4px 0;
 }
-.place{ margin-top:22px; }
 
 /* countdown */
 .count-grid{
@@ -239,16 +217,6 @@ main{ animation:fadeIn .9s ease; }
 .time-box b{ font-family:var(--serif); font-weight:500; font-size:clamp(1.6rem,7.5vw,2.8rem); line-height:1; color:var(--blue); }
 .time-box span{ font-family:var(--sans); font-size:clamp(.5rem,2vw,.68rem); letter-spacing:.14em; text-transform:uppercase; color:var(--ink); }
 
-/* calendar */
-.calendar-frame{
-    max-width:420px; margin:0 auto clamp(26px,6vw,36px);
-    padding:clamp(20px,5vw,34px);
-    background:rgba(255,255,255,.72);
-    border:1px solid var(--blue-soft);
-    outline:1px solid var(--blue-soft); outline-offset:-9px;
-    border-radius:6px;
-    box-shadow:0 14px 36px rgba(51,80,111,.1);
-}
 .cal-month{
     font-family:var(--serif); font-size:clamp(1.5rem,5vw,2rem); font-weight:500;
     letter-spacing:.12em; text-transform:uppercase; margin-bottom:clamp(14px,4vw,22px);
@@ -271,7 +239,7 @@ main{ animation:fadeIn .9s ease; }
     box-shadow:0 10px 28px rgba(51,80,111,.1);
 }
 
-.footer{ padding-bottom:clamp(150px,36vw,230px); }
+.footer{ padding-bottom:calc(clamp(110px,26vw,150px) + env(safe-area-inset-bottom,0px)); }
 .footer .verse{ max-width:26em; margin:0 auto 18px; }
 
 /* ---------- Music button ---------- */
@@ -358,3 +326,76 @@ main{ animation:fadeIn .9s ease; }
     *{ animation-duration:.01ms !important; animation-iteration-count:1 !important; scroll-behavior:auto !important; }
     .petals,.cloud{ display:none; }
 }
+
+
+/* =====================================================
+   ADDITIONS (v3)
+===================================================== */
+
+/* Arabic verse */
+.ayah{
+    max-width:640px; margin:0 auto;
+    font-family:"Amiri",serif;
+    font-size:clamp(1.35rem,5vw,2rem);
+    font-weight:400; line-height:2.2; letter-spacing:0;
+    color:var(--navy); text-align:center;
+}
+.ayah-source{
+    margin-top:10px;
+    font-family:"Amiri",serif;
+    font-size:clamp(1.05rem,3.6vw,1.25rem);
+    letter-spacing:0; color:var(--blue); text-align:center;
+}
+
+/* thin gold separator between the connected parts of the date section */
+.rule{ width:64px; height:1px; margin:clamp(22px,5vw,32px) auto; background:var(--gold); }
+.time{ margin:10px 0 0; }
+.add-cal{ margin-top:clamp(28px,6vw,40px); }
+
+/* Calendar frame: double line, gold diamonds on the corners, title tab on top */
+.calendar-frame{
+    position:relative;
+    max-width:420px;
+    margin:18px auto clamp(34px,8vw,48px);
+    padding:clamp(36px,8vw,46px) clamp(18px,5vw,32px) clamp(22px,5vw,30px);
+    background:rgba(255,255,255,.8);
+    border:1px solid var(--gold);
+    box-shadow:0 18px 44px rgba(51,80,111,.12);
+}
+.calendar-frame::before{
+    content:""; position:absolute; inset:8px;
+    border:1px solid var(--blue-soft);
+    pointer-events:none;
+}
+.fc{
+    position:absolute; width:11px; height:11px;
+    background:var(--gold); transform:rotate(45deg);
+}
+.fc.tl{ top:-6px; left:-6px; }
+.fc.tr{ top:-6px; right:-6px; }
+.fc.bl{ bottom:-6px; left:-6px; }
+.fc.br{ bottom:-6px; right:-6px; }
+
+.frame-tag{
+    position:absolute; top:-13px; left:50%; transform:translateX(-50%);
+    padding:6px 20px;
+    background:#fff; border:1px solid var(--gold); border-radius:999px;
+    font-family:var(--sans); font-size:clamp(.58rem,2vw,.7rem);
+    font-weight:500; letter-spacing:.28em; text-transform:uppercase;
+    white-space:nowrap; color:var(--navy);
+}
+.cal-grid .today{ background:var(--navy); box-shadow:0 0 0 4px rgba(185,154,95,.45); }
+
+/* More compact attendance form */
+.popup-box{ padding:clamp(26px,6vw,34px) clamp(20px,5.5vw,32px) clamp(22px,5vw,28px); }
+.popup-box .title{ font-size:clamp(1.2rem,4.6vw,1.5rem); margin-bottom:0; letter-spacing:.1em; }
+.popup-box input[type="text"],
+.popup-box textarea{ margin-top:12px; padding:11px 16px; font-size:1.1rem; border-radius:14px; }
+.popup-box textarea{ height:78px; }
+.attendance{ gap:8px; margin:12px 0 0; }
+.attendance-card{ height:44px; font-size:1.08rem; }
+.submit-wrapper{ margin-top:16px; }
+.error-message{ margin-top:5px; font-size:.95rem; }
+.success-message{ padding:10px 4px 4px; }
+.rsvp-open{ margin-top:clamp(24px,6vw,34px); }
+.welcome .names.big{ margin-bottom:0; }
